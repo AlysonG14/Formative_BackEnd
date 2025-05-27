@@ -9,45 +9,16 @@ class ProfessorSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class DisciplinaSerializer(serializers.ModelSerializer):
-    professor = ProfessorSerializer(read_only=True)
-    professor_id = serializers.PrimaryKeyRelatedField(
-        queryset=Professor.objects.all(), source='professor', write_only=True
-    )
     class Meta:
         model = Disciplinar
         fields = '__all__'
 
 class AmbienteSerializer(serializers.ModelSerializer):
-    professor = ProfessorSerializer(read_only=True)
-    professor_id = serializers.PrimaryKeyRelatedField(
-        queryset= Professor.objects.all(), source='professor', write_only=True
-    )
-
-    disciplina = DisciplinaSerializer(read_only=True)
-    disciplina_id = serializers.PrimaryKeyRelatedField(
-        queryset= Disciplinar.objects.all(), source='disciplina', write_only=True
-    )
-
     class Meta:
         model = Ambiente
         fields = '__all__'
 
 class ReservaSerializer(serializers.ModelSerializer):
-    professor = ProfessorSerializer(read_only=True)
-    professor_id = serializers.PrimaryKeyRelatedField(
-        queryset = Professor.objects.all(), source='professor', write_only=True
-    )
-    disciplina = DisciplinaSerializer(read_only=True)
-    disciplina_id = serializers.PrimaryKeyRelatedField(
-        queryset = Disciplinar.objects.all(), source='disciplina', write_only=True
-    )
-
-    ambiente = AmbienteSerializer(read_only=True)
-    ambiente_id = serializers.PrimaryKeyRelatedField(
-        queryset = Ambiente.objects.all(), source='ambiente', write_only=True
-    )
-
-
     class Meta:
         model = Reserva
         fields = '__all__'

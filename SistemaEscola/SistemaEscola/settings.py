@@ -52,7 +52,7 @@ SIMPLE_JWT = {
     'ALGORITHM': 'HS256',
     'SIGNING KEY': SECRET_KEY,
     'VERIFYING KEY': None,
-    'AUTH_HEADER_TYPES': ('Bearear',),
+    'AUTH_HEADER_TYPES': ('Bearer',),
     'USER_ID_FIELD': 'id',
     'USER_ID_CLAIM': 'user_id',
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
@@ -113,11 +113,11 @@ WSGI_APPLICATION = 'SistemaEscola.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ambiente',
+        'NAME': 'Ambiente',
         'USER': 'root',
-        'PASSWORD': 'senai',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'PASSWORD': 'Alyson@@@123321...',
+        'HOST': '127.0.0.1',
+        'PORT': '3307'
     }
 }
 

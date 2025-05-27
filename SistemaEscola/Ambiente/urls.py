@@ -14,7 +14,7 @@ urlpatterns = [
     path('ambiente/', views.AmbienteListView.as_view()),
     path('ambiente/create', views.createAmbiente),
     path('ambiente/acesso/<int:pk>', views.detail_ambiente),
-    path('reserva/', views.AmbienteListView.as_view()),
+    path('reserva/', views.ReservaListView.as_view()),
     path('reserva/create', views.createReserva),
     path('reserva/acesso/<int:pk>', views.detail_reserva),
     path('api/token', CustomTokenObtainPairView.as_view(), name='token_obtan_pair'),

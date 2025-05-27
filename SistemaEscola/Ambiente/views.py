@@ -48,7 +48,6 @@ class ProfessorListView(ListAPIView):
     queryset = Professor.objects.all()
     serializer_class = ProfessorSerializer
     pagination_class = MyPageNumberPaginationProfessor
-    permission_classes = [IsAuthenticated, IsGestor]
 
 @api_view(['POST'])
 def professor_create(request):
@@ -81,7 +80,6 @@ class DisciplinaListView(ListAPIView):
     queryset = Disciplinar.objects.all()
     serializer_class = DisciplinaSerializer
     pagination_class = MyPageNumberPaginationDisciplinar
-    permission_classes = [IsAuthenticated, IsDisciplina]
 
 @api_view(['POST'])
 def createDisciplina(request):
@@ -114,7 +112,6 @@ class AmbienteListView(ListAPIView):
     queryset = Ambiente.objects.all()
     serializer_class = AmbienteSerializer
     pagination_class = MyPageNumberPaginationAmbiente
-    permission_classes = [IsAuthenticated, IsAmbiente]
 
 
 @api_view(['POST'])
@@ -141,7 +138,6 @@ class ReservaListView(ListAPIView):
     queryset = Reserva.objects.all()
     serializer_class = ReservaSerializer
     pagination_class = MyPageNumberPaginationReserva
-    permission_classes = [IsAuthenticated]
 
 @api_view(['POST'])
 def createReserva(request):

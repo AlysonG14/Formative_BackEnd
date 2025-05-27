@@ -48,7 +48,8 @@ class Ambiente(models.Model):
     capacidade = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return(self.sala)
+        return self.sala
+
     
     class Meta:
         verbose_name = 'Ambiente'
